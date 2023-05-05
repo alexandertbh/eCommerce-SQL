@@ -115,14 +115,14 @@ router.delete("/:id", (req, res) => {
       id: req.params.id,
     },
   })
-    .then((delCategory) => {
-      console.log("line 120", delCategory);
-      if (!delCategory) {
+    .then((delProduct) => {
+      console.log("line 120", delProduct);
+      if (!delProduct) {
         return res
           .status(404)
           .json({ msg: "no category with this id in database!" });
       }
-      res.json(delCategory);
+      res.json(delProduct);
     })
     .catch((err) => {
       console.log(err);

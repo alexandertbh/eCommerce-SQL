@@ -108,7 +108,7 @@ router.delete("/:id", (req, res) => {
       if (!delProduct) {
         return res
           .status(404)
-          .json({ msg: "no tag with this id in database!" });
+          .json({ msg: "no product with this id in database!" });
       }
       res.json(delProduct);
     })
